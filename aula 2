@@ -1,5 +1,5 @@
 void main(){
-  print("esta saindo alguma coisa");
+  //print("esta saindo alguma coisa");
   Cliente cli = Cliente(
     nome:"luis barboza", 
     cpf:"123.456.789-10", 
