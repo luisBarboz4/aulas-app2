@@ -1,0 +1,70 @@
+void main(){
+  print("esta saindo alguma coisa");
+  Cliente cli = Cliente(
+    nome:"luis barboza", 
+    cpf:"123.456.789-10", 
+    senha:"123",
+    cep:"12345-678",
+  );
+  
+  print(cli);
+}
+
+
+class Cliente {
+  //atributos
+  String? _nome;
+  String? _cpf;
+  String? _nascimento;
+  String? _cep;
+  String? _senha;
+  
+  //metodo construtor
+Cliente({
+      required String nome,
+      required String cpf,
+      String nascimento = "",
+      String cep = "",
+      required String senha,
+  }) {
+  
+    this._nome = nome;
+    this._cpf = cpf;
+    this._nascimento = nascimento;
+    this._cep = cep;
+    this._senha = senha; 
+  }
+    
+    
+  
+  
+  //Metodos
+  bool fazerLogin(){
+    return 
+      (this._cpf == "123.456.789-10") &&
+      (this._senha == "123");
+    
+  }
+  
+  //Getter e setter
+  get nome => this._nome;
+  get cpf => this._cpf;
+  get nascimento => this._nascimento;
+  get cep => this._cep;
+  get senha => this._senha;
+  
+  set nome(valor) => this._nome = valor;
+  set cpf(valor) => this._cpf = valor;
+  set nascimento(valor) => this._nascimento = valor;
+  set cep(valor) => this._cep = valor;
+  set senha(valor) => this._senha = valor;
+  
+  //metodo toString
+  @override
+  String toString(){
+    return "Nome: ${this._nome}\n"+
+           "CPF: ${this._cpf}\n"+
+           "Data de nascimento:${this._nascimento}\n"+
+           "CEP: ${this._cep}\n";
+  }
+}
