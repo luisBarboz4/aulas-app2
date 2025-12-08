@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:form_flutter/pages/form_page.dart';
+import 'package:form_flutter/pages/login_page.dart';
 
 class Myapp extends StatelessWidget {
   const Myapp({super.key});
@@ -25,7 +25,7 @@ class Myapp extends StatelessWidget {
         primarySwatch: Colors.grey
         
       ),
-      home: FormPage(title: "",),
+      home: LoginPage(),
     );
   }
 }
